@@ -1,0 +1,181 @@
+//Definir colores principales
+:root{
+    --ColorPrimario: hsl(15, 74%, 70%);
+    --ColorSecundario: hsl(255, 100%, 85%);
+    --transition: .4s ease-in-out;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+
+//Customización colores bootstrap
+$theme-colors: (
+  'primary': hsl(15, 74%, 70%),
+  'secondary':hsl(255, 56%, 59%)
+);
+
+
+// CLASES GENERALES =========>
+
+.container{
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+.flex{
+    display: flex;
+    align-items: center;
+}
+
+.section{
+    padding: 4rem 0 2rem;
+}
+
+//Estilos por sección
+//2. Home
+.home{
+    padding-top: 5rem;
+    text-align: center;
+    gap: 1rem;
+    flex-direction: column;
+
+    .mainText{
+        font-weight: 700;
+        font-size: 15px;
+        line-height: 2.5rem;
+    }
+
+    .homeImages{
+        width: 100%;
+        margin: 1rem auto 0;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        border-radius: 5rem;
+
+        .videoDiv{
+            width: 500px;
+            height: 300px;
+
+            .video{
+                border-radius: 10rem;
+                width: 100%;
+            }
+        }
+
+    }
+}
+
+//4.Pasos 
+.steps{
+    background-color: var(--ColorSecundario);
+    .sectionContainer{
+        text-align: center;
+        
+        .stepsContainer{
+            margin-top: 1rem;
+            gap: 1.5rem;
+
+            .singleCard{
+                position: relative;
+                height: 320px;
+                width: 85%;
+                max-width: 250px;
+                overflow: hidden;
+                border-radius: 10rem;
+                gap: 1rem;
+                margin: auto;
+                box-shadow: 10px 10px 5px lightblue;
+
+                .stepImage, .stepNumber, .stepName{
+                    position: absolute;
+                }
+
+                .stepImage{
+                    height: 100%;
+                    width: 100%;
+                    top: 0;
+                    right: 0;
+                    left: 0;
+                    bottom: 0;
+                    object-fit: cover;
+                }
+
+                .stepNumber{
+                    height: 50px;
+                    width: 50px;
+                    object-fit: cover;
+                    border-radius: 50%;
+                    bottom: 30px;
+                    left: 40%;
+                    transform: translateX(-50%);
+                    border: 5px solid rgba(255, 255, 255, 0.637);
+                    transition: var(--transition);
+                    animation: animated 2.3s infinite;
+                }
+
+                @keyframes animated {
+                    0%{
+                        transform: translateY(0px);
+                    }
+                    50%{
+                        transform: translateY(14px);
+                    }
+                    100%{
+                        transform: translateY(0px);
+                    }
+                }
+
+                .stepName{
+                    bottom: -100%;
+                    width: 100%;
+                    height: max-content;
+                    background: #ffffff;
+                    padding: 1.5rem 1rem;
+                    transition: var(--transition);
+                    animation: animatedBorders 2.3s infinite;
+
+                    span{
+                        display: block;
+                        color: var(--blackColor);
+                        font-weight: 700;
+                    }
+
+                    p{
+                        color: var(--PrimaryColor);
+                        font-style: italic;
+                    }
+                }
+
+                @keyframes animatedBorders {
+                    0%{
+                        border-radius: 0rem;
+                    }
+                    50%{
+                        border-radius: 2rem;
+                    }
+                    100%{
+                        border-radius: 0rem;
+                    }
+                }
+
+                &:hover{
+                    .stepName{
+                        bottom: 0;
+                        transition: 1s ease-in-out;
+                    }
+
+                    .stepNumber{
+                        bottom: 200px;
+                        transition: 1s ease-in-out;
+                    }
+                }
+            }
+        }
+    }
+}
+/*Importar bootstrap*/
+@import '~bootstrap/scss/bootstrap';
