@@ -36,6 +36,7 @@ function App() {
             <Route path="/carrito" element={<Carrito />} />
             <Route path="/perfil" element={<Perfil />} />
           </Routes>
+          <Footer />
         </Provider>
       </BrowserRouter>
     </>
