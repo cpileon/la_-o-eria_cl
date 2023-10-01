@@ -1,16 +1,32 @@
-import { useState } from 'react'
+//Importar librerias
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+
+//Importar contexto
+import MyContext from './MyContext';
+
+//Importar componentes
 import Navbar from './Components/Navegacion'
-import Home from './Components/Home'
-import Steps from './Components/Steps'
+import Footer from './Components/Footer'
+
+//Importar vistas
+import Home from './views/Home'
+import Perfil from './views/Perfil'
+
 
 function App() {
 
   return (
     <> 
-      <Navbar />
-      <Home />
-      <Steps />
-
+    <MyContext.Provider value={""}>
+      <BrowserRouter>
+        <Navbar />
+          <Routes>
+            <Route path="/" element={<Home/>}/>
+            <Route path="/perfil" element={<Perfil/>}/>
+          </Routes>
+        <Footer />
+      </BrowserRouter>
+    </MyContext.Provider>
     </>
   )
 }

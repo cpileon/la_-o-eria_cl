@@ -1,35 +1,44 @@
 import React from 'react'
 
-import stepOne from '../assets/01.jpg'
-import stepTwo from '../assets/02.jpg'
-import stepThree from '../assets/03.jpg'
-import stepFour from '../assets/04.jpg'
+import stepOne from '../assets/step1.png'
+import stepTwo from '../assets/step2.png'
+import stepThree from '../assets/step3.png'
+import stepFour from '../assets/step4.png'
+
+import num1 from '../assets/num1.png'
+import num2 from '../assets/num2.png'
+import num3 from '../assets/num3.png'
+import num4 from '../assets/num4.png'
 
 
 const stepArray = [
     {
       id: 1,
       imagen: stepOne,
-      nombre: 'Registrarse',
-      descripcion: 'Esta es una prueba para cachar cuanto sube esta parte de la imagen osi '
+      numIMG: num1,
+      nombre: 'REGISTRARSE',
+      descripcion: 'Crea una cuenta en nuestro sitio web haciendo click en REGISTRARSE.'
     },
     {
       id: 2,
       imagen: stepTwo,
-      nombre: 'postea',
-      descripcion: 'Este es el paso 2'
+      numIMG: num2,
+      nombre: 'POSTEA',
+      descripcion: 'Sube a nuestra plataforma los productos que quieres vender.'
     },
     {
       id: 3,
       imagen: stepThree,
-      nombre: 'interactua',
-      descripcion: 'Este es el paso 3'
+      numIMG: num3,
+      nombre: 'INTERACTÚA',
+      descripcion: 'Revisa las publicaciones y perfiles de otros usuarios para descubrir artículos increíbles.'
     },
     {
       id: 4,
       imagen: stepFour,
-      nombre: 'vende',
-      descripcion: 'Este es el paso 4'
+      numIMG: num4,
+      nombre: 'CONCRETA',
+      descripcion: '¡Conecta con otros/as usuarios/as para comprar y de forma segura y rápida!'
     }
   ]
 const Steps = () => {
@@ -50,8 +59,8 @@ const Steps = () => {
                 <div key={step.id} className="singleCard">
                 <img src= {step.imagen} className='stepImage'/>
                   <div className="stepDetails">
-                    <div className="travelerPicture">
-                      <img src= {step.imagen} className='stepNumber'/>
+                    <div className="numberPicture">
+                      <img src= {step.numIMG} className='stepNumber'/>
                     </div>
                     <div className="stepName">
                       <span>{step.nombre}</span>

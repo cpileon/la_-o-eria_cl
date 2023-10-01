@@ -1,13 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300;400;500;600;700&display=swap');
+
 //Definir colores principales
 :root{
     --ColorPrimario: hsl(15, 74%, 70%);
     --ColorSecundario: hsl(255, 100%, 85%);
+    --gris: hsl(0, 0%, 20%);
     --transition: .4s ease-in-out;
+    --whiteShadow: drop-shadow(2px 2px 0px #ffffff);
+    --whiteShadow2: drop-shadow(6px 6px 0px #ffffff);
+    --greyShadow: 10px 10px 5px hsl(0, 0%, 20%);;
 }
 
 *{
     padding: 0;
     margin: 0;
+    font-family: 'Kanit', sans-serif;
 }
 
 
@@ -34,7 +41,36 @@ $theme-colors: (
     padding: 4rem 0 2rem;
 }
 
+.icon{
+    font-size: 1.3rem;
+    cursor: pointer;
+    transition: var(--transition); 
+    margin: 1rem; 
+
+    &:hover{
+        transform: translateY(-5%);
+        filter: var(--whiteShadow2);
+    }
+}
+
+
+
 //Estilos por sección
+//1. Nav Bar
+.navegacion{
+    .brand{
+        .logo{
+            height: 30px;
+            filter: var(--whiteShadow);
+            transition: var(--transition);  
+
+            &:hover{
+                transform: translateY(-10%);
+                filter: var(--whiteShadow2);
+            }
+        }
+    }
+}
 //2. Home
 .home{
     padding-top: 5rem;
@@ -61,8 +97,45 @@ $theme-colors: (
             height: 300px;
 
             .video{
-                border-radius: 10rem;
+                border-radius: 10rem 3rem 10rem 3rem;
                 width: 100%;
+            }
+        }
+
+        .banner{
+            position: absolute;
+            width: 40%;
+            top: -10%;
+            left: 50%
+        }
+
+        .catchPhrase1{
+            position: absolute;
+            text-align: left;
+            width: 65%;
+            top: 75%;
+            left: 18%;
+
+            .phrase1{
+                color: #ffffff;
+                background-color: var(--gris);
+                padding-left: 2%;
+                border-radius: 10px;
+            }
+        }
+
+        .catchPhrase2{
+            position: absolute;
+            text-align: left;
+            width: 50%;
+            top: 92%;
+            left: 30%;
+
+            .phrase2{
+                color: #ffffff;
+                background-color: var(--gris);
+                padding-left: 2%;
+                border-radius: 5px;
             }
         }
 
@@ -71,7 +144,6 @@ $theme-colors: (
 
 //4.Pasos 
 .steps{
-    background-color: var(--ColorSecundario);
     .sectionContainer{
         text-align: center;
         
@@ -88,7 +160,7 @@ $theme-colors: (
                 border-radius: 10rem;
                 gap: 1rem;
                 margin: auto;
-                box-shadow: 10px 10px 5px lightblue;
+                box-shadow: var(--greyShadow);
 
                 .stepImage, .stepNumber, .stepName{
                     position: absolute;
@@ -103,19 +175,23 @@ $theme-colors: (
                     bottom: 0;
                     object-fit: cover;
                 }
-
-                .stepNumber{
-                    height: 50px;
-                    width: 50px;
-                    object-fit: cover;
-                    border-radius: 50%;
-                    bottom: 30px;
-                    left: 40%;
-                    transform: translateX(-50%);
-                    border: 5px solid rgba(255, 255, 255, 0.637);
-                    transition: var(--transition);
-                    animation: animated 2.3s infinite;
+                .numberPicture{
+                    
+                    
+                    .stepNumber{
+                        background-color: var(--ColorPrimario);
+                        height: 50px;
+                        width: 50px;
+                        border-radius: 50%;
+                        bottom: 30px;
+                        left: 40%;
+                        transform: translateX(-50%);
+                        border: 5px solid rgba(255, 255, 255, 0.637);
+                        transition: var(--transition);
+                        animation: animated 2.3s infinite;
+                    }
                 }
+
 
                 @keyframes animated {
                     0%{
@@ -147,6 +223,7 @@ $theme-colors: (
                     p{
                         color: var(--PrimaryColor);
                         font-style: italic;
+                        padding: 5px;
                     }
                 }
 
@@ -177,5 +254,50 @@ $theme-colors: (
         }
     }
 }
+
+//5.Footer
+.footer{
+    background-color: var(--ColorSecundario);
+
+    .rrssData{
+        text-align: center
+    }
+
+    .contactData{
+        border-left: dotted;
+        p{
+            margin: 0px;
+            padding: 0px;
+        }
+    }
+}
+
+//6.Perfil
+.perfil{    
+    padding-top: 5rem;
+    padding-bottom: 2rem;
+    gap: 1rem;
+    .container{
+        .card1{
+            border: solid grey;
+            border-radius: 30px;
+            flex-direction: column;
+            padding: 1rem;
+            text-align: center;
+            p{
+                font-size: 1.5rem;
+
+            }
+            span{
+                font-weight: 500
+            }
+            .placeholderProfile{
+                width: 30%;
+                margin: 1rem;
+            }
+
+        }
+    }
+   }
 /*Importar bootstrap*/
 @import '~bootstrap/scss/bootstrap';

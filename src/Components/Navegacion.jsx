@@ -4,12 +4,16 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 
+import logosolo from '../assets/logosolo.png'
+
 const Navegacion = () => {
   return (
     <div>
-     <Navbar expand="lg" bg="primary" className='box-shadow'>
+     <Navbar expand="lg" bg="primary" className='navegacion box-shadow' fixed='top'>
       <Container>
-        <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+        <Navbar.Brand href="#home" className='brand'>
+          <img src={logosolo} alt="La Ñoñería.cl" className='logo' />
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">

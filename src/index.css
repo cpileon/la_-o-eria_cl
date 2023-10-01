@@ -1,13 +1,19 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300;400;500;600;700&display=swap");
 :root {
   --ColorPrimario: hsl(15, 74%, 70%);
   --ColorSecundario: hsl(255, 100%, 85%);
+  --gris: hsl(0, 0%, 20%);
   --transition: .4s ease-in-out;
+  --whiteShadow: drop-shadow(2px 2px 0px #ffffff);
+  --whiteShadow2: drop-shadow(6px 6px 0px #ffffff);
+  --greyShadow: 10px 10px 5px hsl(0, 0%, 20%);
 }
 
 * {
   padding: 0;
   margin: 0;
+  font-family: "Kanit", sans-serif;
 }
 
 .container {
@@ -22,6 +28,27 @@
 
 .section {
   padding: 4rem 0 2rem;
+}
+
+.icon {
+  font-size: 1.3rem;
+  cursor: pointer;
+  transition: var(--transition);
+  margin: 1rem;
+}
+.icon:hover {
+  transform: translateY(-5%);
+  filter: var(--whiteShadow2);
+}
+
+.navegacion .brand .logo {
+  height: 30px;
+  filter: var(--whiteShadow);
+  transition: var(--transition);
+}
+.navegacion .brand .logo:hover {
+  transform: translateY(-10%);
+  filter: var(--whiteShadow2);
 }
 
 .home {
@@ -48,13 +75,42 @@
   height: 300px;
 }
 .home .homeImages .videoDiv .video {
-  border-radius: 10rem;
+  border-radius: 10rem 3rem 10rem 3rem;
   width: 100%;
 }
-
-.steps {
-  background-color: var(--ColorSecundario);
+.home .homeImages .banner {
+  position: absolute;
+  width: 40%;
+  top: -10%;
+  left: 50%;
 }
+.home .homeImages .catchPhrase1 {
+  position: absolute;
+  text-align: left;
+  width: 65%;
+  top: 75%;
+  left: 18%;
+}
+.home .homeImages .catchPhrase1 .phrase1 {
+  color: #ffffff;
+  background-color: var(--gris);
+  padding-left: 2%;
+  border-radius: 10px;
+}
+.home .homeImages .catchPhrase2 {
+  position: absolute;
+  text-align: left;
+  width: 50%;
+  top: 92%;
+  left: 30%;
+}
+.home .homeImages .catchPhrase2 .phrase2 {
+  color: #ffffff;
+  background-color: var(--gris);
+  padding-left: 2%;
+  border-radius: 5px;
+}
+
 .steps .sectionContainer {
   text-align: center;
 }
@@ -71,7 +127,7 @@
   border-radius: 10rem;
   gap: 1rem;
   margin: auto;
-  box-shadow: 10px 10px 5px lightblue;
+  box-shadow: var(--greyShadow);
 }
 .steps .sectionContainer .stepsContainer .singleCard .stepImage, .steps .sectionContainer .stepsContainer .singleCard .stepNumber, .steps .sectionContainer .stepsContainer .singleCard .stepName {
   position: absolute;
@@ -86,11 +142,10 @@
   -o-object-fit: cover;
      object-fit: cover;
 }
-.steps .sectionContainer .stepsContainer .singleCard .stepNumber {
+.steps .sectionContainer .stepsContainer .singleCard .numberPicture .stepNumber {
+  background-color: var(--ColorPrimario);
   height: 50px;
   width: 50px;
-  -o-object-fit: cover;
-     object-fit: cover;
   border-radius: 50%;
   bottom: 30px;
   left: 40%;
@@ -128,6 +183,7 @@
 .steps .sectionContainer .stepsContainer .singleCard .stepName p {
   color: var(--PrimaryColor);
   font-style: italic;
+  padding: 5px;
 }
 @keyframes animatedBorders {
   0% {
@@ -147,6 +203,43 @@
 .steps .sectionContainer .stepsContainer .singleCard:hover .stepNumber {
   bottom: 200px;
   transition: 1s ease-in-out;
+}
+
+.footer {
+  background-color: var(--ColorSecundario);
+}
+.footer .rrssData {
+  text-align: center;
+}
+.footer .contactData {
+  border-left: dotted;
+}
+.footer .contactData p {
+  margin: 0px;
+  padding: 0px;
+}
+
+.perfil {
+  padding-top: 5rem;
+  padding-bottom: 2rem;
+  gap: 1rem;
+}
+.perfil .container .card1 {
+  border: solid grey;
+  border-radius: 30px;
+  flex-direction: column;
+  padding: 1rem;
+  text-align: center;
+}
+.perfil .container .card1 p {
+  font-size: 1.5rem;
+}
+.perfil .container .card1 span {
+  font-weight: 500;
+}
+.perfil .container .card1 .placeholderProfile {
+  width: 30%;
+  margin: 1rem;
 }
 
 /*Importar bootstrap*/
