@@ -19,16 +19,20 @@ function App() {
 
   return (
     <>
-      <MyContext.Provider value={""}>
-        <BrowserRouter>
+      <BrowserRouter>
+        <Provider >
           <Navbar />
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Register />} />
+            <Route path="/tienda" element={<Tienda />} />
+            <Route path="/producto/:id" element={<Producto />} />
+            <Route path="/carrito" element={<Carrito />} />
             <Route path="/perfil" element={<Perfil />} />
           </Routes>
-          <Footer />
-        </BrowserRouter>
-      </MyContext.Provider>
+        </Provider>
+      </BrowserRouter>
     </>
   )
 }
