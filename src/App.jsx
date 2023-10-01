@@ -13,20 +13,22 @@ import Home from './views/Home'
 import Perfil from './views/Perfil'
 
 
+//HOLAHOLA//
+
 function App() {
 
   return (
-    <> 
-    <MyContext.Provider value={""}>
-      <BrowserRouter>
-        <Navbar />
+    <>
+      <MyContext.Provider value={""}>
+        <BrowserRouter>
+          <Navbar />
           <Routes>
-            <Route path="/" element={<Home/>}/>
-            <Route path="/perfil" element={<Perfil/>}/>
+            <Route path="/" element={<Home />} />
+            <Route path="/perfil" element={<Perfil />} />
           </Routes>
-        <Footer />
-      </BrowserRouter>
-    </MyContext.Provider>
+          <Footer />
+        </BrowserRouter>
+      </MyContext.Provider>
     </>
   )
 }
