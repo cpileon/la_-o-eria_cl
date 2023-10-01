@@ -1,17 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300;400;500;600;700&display=swap');
 
 //Definir colores principales
-:root{
+:root {
     --ColorPrimario: hsl(15, 74%, 70%);
     --ColorSecundario: hsl(255, 100%, 85%);
     --gris: hsl(0, 0%, 20%);
     --transition: .4s ease-in-out;
     --whiteShadow: drop-shadow(2px 2px 0px #ffffff);
     --whiteShadow2: drop-shadow(6px 6px 0px #ffffff);
-    --greyShadow: 10px 10px 5px hsl(0, 0%, 20%);;
+    --greyShadow: 10px 10px 5px hsl(0, 0%, 20%);
+    ;
 }
 
-*{
+* {
     padding: 0;
     margin: 0;
     font-family: 'Kanit', sans-serif;
@@ -20,34 +21,34 @@
 
 //Customización colores bootstrap
 $theme-colors: (
-  'primary': hsl(15, 74%, 70%),
-  'secondary':hsl(255, 56%, 59%)
+    'primary': hsl(15, 74%, 70%),
+    'secondary':hsl(255, 56%, 59%)
 );
 
 
 // CLASES GENERALES =========>
 
-.container{
+.container {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
 }
 
-.flex{
+.flex {
     display: flex;
     align-items: center;
 }
 
-.section{
+.section {
     padding: 4rem 0 2rem;
 }
 
-.icon{
+.icon {
     font-size: 1.3rem;
     cursor: pointer;
-    transition: var(--transition); 
-    margin: 1rem; 
+    transition: var(--transition);
+    margin: 1rem;
 
-    &:hover{
+    &:hover {
         transform: translateY(-5%);
         filter: var(--whiteShadow2);
     }
@@ -57,34 +58,35 @@ $theme-colors: (
 
 //Estilos por sección
 //1. Nav Bar
-.navegacion{
-    .brand{
-        .logo{
+.navegacion {
+    .brand {
+        .logo {
             height: 30px;
             filter: var(--whiteShadow);
-            transition: var(--transition);  
+            transition: var(--transition);
 
-            &:hover{
+            &:hover {
                 transform: translateY(-10%);
                 filter: var(--whiteShadow2);
             }
         }
     }
 }
+
 //2. Home
-.home{
+.home {
     padding-top: 5rem;
     text-align: center;
     gap: 1rem;
     flex-direction: column;
 
-    .mainText{
+    .mainText {
         font-weight: 700;
         font-size: 15px;
         line-height: 2.5rem;
     }
 
-    .homeImages{
+    .homeImages {
         width: 100%;
         margin: 1rem auto 0;
         justify-content: center;
@@ -92,31 +94,31 @@ $theme-colors: (
         position: relative;
         border-radius: 5rem;
 
-        .videoDiv{
+        .videoDiv {
             width: 500px;
             height: 300px;
 
-            .video{
+            .video {
                 border-radius: 10rem 3rem 10rem 3rem;
                 width: 100%;
             }
         }
 
-        .banner{
+        .banner {
             position: absolute;
             width: 40%;
             top: -10%;
             left: 50%
         }
 
-        .catchPhrase1{
+        .catchPhrase1 {
             position: absolute;
             text-align: left;
             width: 65%;
             top: 75%;
             left: 18%;
 
-            .phrase1{
+            .phrase1 {
                 color: #ffffff;
                 background-color: var(--gris);
                 padding-left: 2%;
@@ -124,14 +126,14 @@ $theme-colors: (
             }
         }
 
-        .catchPhrase2{
+        .catchPhrase2 {
             position: absolute;
             text-align: left;
             width: 50%;
             top: 92%;
             left: 30%;
 
-            .phrase2{
+            .phrase2 {
                 color: #ffffff;
                 background-color: var(--gris);
                 padding-left: 2%;
@@ -143,15 +145,15 @@ $theme-colors: (
 }
 
 //4.Pasos 
-.steps{
-    .sectionContainer{
+.steps {
+    .sectionContainer {
         text-align: center;
-        
-        .stepsContainer{
+
+        .stepsContainer {
             margin-top: 1rem;
             gap: 1.5rem;
 
-            .singleCard{
+            .singleCard {
                 position: relative;
                 height: 320px;
                 width: 85%;
@@ -162,11 +164,13 @@ $theme-colors: (
                 margin: auto;
                 box-shadow: var(--greyShadow);
 
-                .stepImage, .stepNumber, .stepName{
+                .stepImage,
+                .stepNumber,
+                .stepName {
                     position: absolute;
                 }
 
-                .stepImage{
+                .stepImage {
                     height: 100%;
                     width: 100%;
                     top: 0;
@@ -175,10 +179,11 @@ $theme-colors: (
                     bottom: 0;
                     object-fit: cover;
                 }
-                .numberPicture{
-                    
-                    
-                    .stepNumber{
+
+                .numberPicture {
+
+
+                    .stepNumber {
                         background-color: var(--ColorPrimario);
                         height: 50px;
                         width: 50px;
@@ -194,18 +199,20 @@ $theme-colors: (
 
 
                 @keyframes animated {
-                    0%{
+                    0% {
                         transform: translateY(0px);
                     }
-                    50%{
+
+                    50% {
                         transform: translateY(14px);
                     }
-                    100%{
+
+                    100% {
                         transform: translateY(0px);
                     }
                 }
 
-                .stepName{
+                .stepName {
                     bottom: -100%;
                     width: 100%;
                     height: max-content;
@@ -214,13 +221,13 @@ $theme-colors: (
                     transition: var(--transition);
                     animation: animatedBorders 2.3s infinite;
 
-                    span{
+                    span {
                         display: block;
                         color: var(--blackColor);
                         font-weight: 700;
                     }
 
-                    p{
+                    p {
                         color: var(--PrimaryColor);
                         font-style: italic;
                         padding: 5px;
@@ -228,24 +235,26 @@ $theme-colors: (
                 }
 
                 @keyframes animatedBorders {
-                    0%{
+                    0% {
                         border-radius: 0rem;
                     }
-                    50%{
+
+                    50% {
                         border-radius: 2rem;
                     }
-                    100%{
+
+                    100% {
                         border-radius: 0rem;
                     }
                 }
 
-                &:hover{
-                    .stepName{
+                &:hover {
+                    .stepName {
                         bottom: 0;
                         transition: 1s ease-in-out;
                     }
 
-                    .stepNumber{
+                    .stepNumber {
                         bottom: 200px;
                         transition: 1s ease-in-out;
                     }
@@ -256,16 +265,17 @@ $theme-colors: (
 }
 
 //5.Footer
-.footer{
+.footer {
     background-color: var(--ColorSecundario);
 
-    .rrssData{
+    .rrssData {
         text-align: center
     }
 
-    .contactData{
+    .contactData {
         border-left: dotted;
-        p{
+
+        p {
             margin: 0px;
             padding: 0px;
         }
@@ -273,31 +283,42 @@ $theme-colors: (
 }
 
 //6.Perfil
-.perfil{    
+.perfil {
     padding-top: 5rem;
     padding-bottom: 2rem;
     gap: 1rem;
-    .container{
-        .card1{
+
+    .container {
+        .card1 {
             border: solid grey;
             border-radius: 30px;
             flex-direction: column;
             padding: 1rem;
             text-align: center;
-            p{
+
+            p {
                 font-size: 1.5rem;
 
             }
-            span{
+
+            span {
                 font-weight: 500
             }
-            .placeholderProfile{
+
+            .placeholderProfile {
                 width: 30%;
                 margin: 1rem;
             }
 
         }
     }
-   }
+}
+
+.productoS {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    background-color: aqua;
+}
+
 /*Importar bootstrap*/
 @import '~bootstrap/scss/bootstrap';

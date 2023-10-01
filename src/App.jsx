@@ -2,7 +2,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 //Importar contexto
-import MyContext from './MyContext';
+import { Provider } from "./Context";
 
 //Importar componentes
 import Navbar from './Components/Navegacion'
@@ -11,6 +11,11 @@ import Footer from './Components/Footer'
 //Importar vistas
 import Home from './views/Home'
 import Perfil from './views/Perfil'
+import Login from './views/Login'
+import Register from './views/Register'
+import Tienda from './views/Tienda'
+import Producto from './views/Producto'
+import Carrito from './views/Carrito'
 
 
 //HOLAHOLA//
