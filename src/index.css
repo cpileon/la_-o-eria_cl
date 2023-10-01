@@ -111,6 +111,10 @@
   border-radius: 5px;
 }
 
+.Carrusel {
+  margin: 2rem 0rem 2rem 0rem;
+}
+
 .steps .sectionContainer {
   text-align: center;
 }

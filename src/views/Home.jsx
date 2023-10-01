@@ -5,9 +5,11 @@ import 'aos/dist/aos.css'
 
 //Importar Componentes
 import Steps from '../Components/Steps'
+
 //Importar Assets
 import videoHome from '../assets/videoHome.mp4'
 import imagebanner from '../assets/homeimg1.png'
+import Carrusel from '../Components/Carrusel'
 
 const Home = () => {
   //Animación de entrada
@@ -36,6 +38,7 @@ const Home = () => {
             </div>
         </div>
     </div>
+    <Carrusel />
     <Steps />
 
     </>
