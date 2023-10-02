@@ -39,7 +39,7 @@ export default function Cards() {
             {productos.map((producto) => {
                 return (
                     <Card key={producto.id} style={{ width: '20rem' }}>
-                        <Card.Img variant="top" src={producto.img} />
+                        <Card.Img variant="top" src={producto.img} className="imgCard"/>
                         <Card.Body>
                             <Card.Title className="titles">{producto.name}</Card.Title>
                             <hr />

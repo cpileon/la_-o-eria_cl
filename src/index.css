@@ -312,6 +312,9 @@
   grid-template-columns: auto auto auto;
   gap: 1rem;
 }
+.galeria .imgCard {
+  height: 300px;
+}
 .galeria .botones {
   display: flex;
   justify-content: space-around;
@@ -326,7 +329,8 @@
 }
 .detalleProducto .container .productImage img {
   border-radius: 30px;
-  width: 400px;
+  height: 400px;
+  width: auto;
 }
 
 /*Importar bootstrap*/

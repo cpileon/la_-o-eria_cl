@@ -401,6 +401,9 @@ $dropdown-dark-bg:      hsl(15, 74%, 70%)    ;
     display: grid;
     grid-template-columns: auto auto auto;
     gap:1rem;
+    .imgCard{
+        height: 300px;
+    }
     .botones{
         display: flex;
         justify-content: space-around
@@ -420,7 +423,8 @@ $dropdown-dark-bg:      hsl(15, 74%, 70%)    ;
 
             img{
                 border-radius: 30px;
-                width: 400px;
+                height: 400px;
+                width: auto;
             }
         }
     }
