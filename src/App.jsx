@@ -16,6 +16,7 @@ import Register from './views/Register'
 import Tienda from './views/Tienda'
 import Producto from './views/Producto'
 import Carrito from './views/Carrito'
+import Publicar from './views/Publicar'
 
 
 //HOLAHOLA//
@@ -35,6 +36,7 @@ function App() {
             <Route path="/producto/:id" element={<Producto />} />
             <Route path="/carrito" element={<Carrito />} />
             <Route path="/perfil" element={<Perfil />} />
+            <Route path="/publicar" element={<Publicar />} />
           </Routes>
           <Footer />
         </Provider>
