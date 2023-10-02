@@ -38,7 +38,7 @@ const Navegacion = () => {
               <Nav.Link className={setActiveClass} to="/Carrito">
                 🛒 Carrito: ${total ? total.toLocaleString() : 0}
               </Nav.Link>
-              <NavDropdown title="Dropdown" id="basic-nav-dropdown">
+              <NavDropdown title="Dropdown" id="basic-nav-dropdown" menuVariant="dark">
                 <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.2">
                   Another action

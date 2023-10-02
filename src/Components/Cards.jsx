@@ -35,10 +35,10 @@ export default function Cards() {
     }
 
     return (
-        <div className="galeria grid-columns-3 p-3">
+        <div className="galeria">
             {productos.map((producto) => {
                 return (
-                    <Card key={producto.id} style={{ width: '18rem' }}>
+                    <Card key={producto.id} style={{ width: '20rem' }}>
                         <Card.Img variant="top" src={producto.img} />
                         <Card.Body>
                             <Card.Title className="titles">{producto.name}</Card.Title>
@@ -57,8 +57,8 @@ export default function Cards() {
                                 <strong> $ {producto.price.toLocaleString()} </strong>
                             </Card.Text>
                             <div className="botones">
-                                <Button className="bVermas" onClick={verDetalle} id={producto.id} variant="info">Ver Más 👀</Button>
-                                <Button className="bAdd" onClick={() => agregarAlCarrito(producto)} id={producto.id} variant="danger">Añadir 🛒</Button>
+                                <button className="btnOne" onClick={verDetalle} id={producto.id}>Ver Más 👀</button>
+                                <button className="btnTwo" onClick={() => agregarAlCarrito(producto)} id={producto.id}>Añadir 🛒</button>
                             </div>
                         </Card.Body>
                     </Card>

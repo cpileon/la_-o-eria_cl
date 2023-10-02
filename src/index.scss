@@ -5,10 +5,12 @@
     --ColorPrimario: hsl(15, 74%, 70%);
     --ColorSecundario: hsl(255, 100%, 85%);
     --gris: hsl(0, 0%, 20%);
+    --agua: hsl(178, 15%, 67%);
     --transition: .4s ease-in-out;
     --whiteShadow: drop-shadow(2px 2px 0px #ffffff);
     --whiteShadow2: drop-shadow(6px 6px 0px #ffffff);
     --greyShadow: 10px 10px 5px hsl(0, 0%, 20%);
+    --greyShadowBtn: 6px 6px 3px hsl(0, 0%, 78%);
     ;
 }
 
@@ -24,6 +26,9 @@ $theme-colors: (
     'primary': hsl(15, 74%, 70%),
     'secondary':hsl(255, 56%, 59%)
 );
+
+$dropdown-dark-bg:      hsl(15, 74%, 70%)    ;
+
 
 
 // CLASES GENERALES =========>
@@ -54,7 +59,53 @@ $theme-colors: (
     }
 }
 
+.btnOne{
+    background-color: var(--ColorPrimario);
+    margin: 1.5rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 10px;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
 
+    &:hover{
+        background-color: var(--agua);
+        box-shadow: var(--greyShadowBtn);
+    }
+
+}
+
+.btnTwo{
+    background-color: var(--ColorSecundario);
+    margin: 1.5rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 10px;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+
+    &:hover{
+        background-color: var(--agua);
+        box-shadow: var(--greyShadowBtn);
+    }
+
+}
+
+.btnThree{
+    background-color: transparent;
+    margin: 1.5rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 10px;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+
+    &:hover{
+        box-shadow: var(--greyShadowBtn);
+
+    }
+
+}
 
 //Estilos por sección
 //1. Nav Bar
@@ -314,11 +365,67 @@ $theme-colors: (
     }
 }
 
-.productoS {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    background-color: aqua;
+//7.Login
+.login{
+    .groupMail{
+        margin-bottom: 1rem;
+    }
+    .botonLogin{
+        text-align: center;
+    }
+    .textLogin{
+        text-align: center;
+        .text1{
+            font-size: 1.5rem;
+        }
+    }
 }
 
+//8.Registro
+.registro{
+    .form-group{
+        margin-bottom: 1rem;
+    }
+    .botonReg{
+        text-align: center;
+    }
+    .textReg{
+        text-align: center;
+    }
+}
+//9.Productos
+
+
+//10. Galería y cartas
+.galeria {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap:1rem;
+    .botones{
+        display: flex;
+        justify-content: space-around
+    }
+}
+
+//11.Detalle producto
+.detalleProducto{
+    .container{
+    
+        .productImage{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+
+            img{
+                border-radius: 30px;
+                width: 400px;
+            }
+        }
+    }
+}
+
+  
 /*Importar bootstrap*/
 @import '~bootstrap/scss/bootstrap';

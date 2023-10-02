@@ -5,6 +5,8 @@ import 'aos/dist/aos.css'
 
 //Importar Componentes
 import Steps from '../Components/Steps'
+import Carrusel from '../Components/Carrusel'
+
 //Importar Assets
 import videoHome from '../assets/videoHome.mp4'
 import imagebanner from '../assets/homeimg1.png'
@@ -17,7 +19,7 @@ const Home = () => {
 
   return (
     <>
-    <div className="home flex container">
+    <div className="home flex container section">
         <div className="mainText">
             <h1 data-aos='fade-up' data-aos-duration='2500'>¡Bienvenidos/as!</h1>
         </div>
@@ -36,7 +38,9 @@ const Home = () => {
             </div>
         </div>
     </div>
+    <Carrusel />
     <Steps />
+
 
     </>
   )

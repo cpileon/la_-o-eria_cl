@@ -38,7 +38,7 @@ export default function Carrito() {
     }
 
     return (
-        <div className="contenedorMain">
+        <div className="carrito section container">
             <div className="contenedorMa">
                 <h2>Detalles de su compra</h2>
                 {prevCarrito != 0 ? (
@@ -81,15 +81,15 @@ export default function Carrito() {
                         );
                     })
                 ) : (
-                    <h3>⚠️ Ups! No tienes productos en tu carrito! <Button className="btn btn-secondary" onClick={volverInicio}>Volver</Button></h3>
+                    <h3>⚠️ Ups! No tienes productos en tu carrito! <button className="btnTwo" onClick={volverInicio}>Volver</button></h3>
 
                 )}
                 <h4 className='my-4'>Total a Pagar: ${total.toLocaleString()}</h4>
-                <Button className='btn btn-success'>
+                <button className='btnOne'>
                     Ir a Pagar
-                </Button>
+                </button>
                 <div className="vaciar">
-                    <button className="btn btn-warning" onClick={vaciarCarrito}>Vaciar Carrito ❌</button>
+                    <button className="btnThree" onClick={vaciarCarrito}>Vaciar Carrito ❌</button>
                 </div>
             </div>
         </div>

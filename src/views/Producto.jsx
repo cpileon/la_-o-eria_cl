@@ -1,10 +1,16 @@
 import { useEffect, useState, useContext } from "react";
 import { useParams, useNavigate } from "react-router-dom";
+import Aos from 'aos'
+import 'aos/dist/aos.css'
+
+//Importar Contexto
 import Context from "../Context";
 
+//Importar elementos bootstrap
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
 /* import "../assets/pizza.css" */
 
 export default function Producto() {
@@ -20,8 +26,8 @@ export default function Producto() {
         return setChosenProducto(productos.filter((item) => item.id === params.id));
     };
 
-    const volverInicio = (e) => {
-        navigate("/")
+    const volverTienda = (e) => {
+        navigate("/tienda")
     }
 
     const agregarAlCarrito = ({ id, price, name, img }) => {
@@ -53,14 +59,22 @@ export default function Producto() {
 
     console.log(chosenProducto);
 
+      //Animación de entrada
+        useEffect(()=>{
+            Aos.init({duration: 2000})
+        }, [])
 
     return (
-        <div>
+        <div className="detalleProducto section container" data-aos='fade-up' data-aos-duration='1500'>
             {chosenProducto ? (
                 <Card className="container">
-                    <div >
-                        <img className="imgContainer" src={chosenProducto[0].img} alt="" />
-                    </div>
+                    <Row>
+                        <Col>
+                            <div className="productImage">
+                                <img className="imgContainer" src={chosenProducto[0].img} alt="" />
+                            </div>
+                        </Col>
+                        <Col>
                     <Card.Body>
                         <Card.Title className="titleP"><h2>{chosenProducto[0].name}</h2></Card.Title>
                         <Card.Text>
@@ -79,10 +93,13 @@ export default function Producto() {
                         <hr />
                         <div className="bottom">
                             <h3>Precio: ${chosenProducto[0].price.toLocaleString()}</h3>
-                            <Button className="bAdd" onClick={() => agregarAlCarrito(chosenProducto[0])} id={chosenProducto[0].id} variant="danger">Añadir 🛒</Button>
+                            <button className="btnOne" onClick={() => agregarAlCarrito(chosenProducto[0])} id={chosenProducto[0].id} >Añadir 🛒</button>
                         </div>
+                        
                     </Card.Body>
-                    <div><Button className="btn btn-secondary" onClick={volverInicio}>Atrás</Button></div>
+                    <div><button className="btnTwo" onClick={volverTienda}>Atrás</button></div>
+                    </Col>
+                    </Row>
                 </Card>
 
             ) : null

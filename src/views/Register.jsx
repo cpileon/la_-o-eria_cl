@@ -27,7 +27,7 @@ export default function RegistroForm() {
     };
 
     return (
-        <div className="col-10 col-sm-6 col-md-3 m-auto mt-5">
+        <div className="registro col-10 col-sm-6 col-md-3 m-auto mt-5 section">
             <h1>Registrar nuevo usuario</h1>
             <hr />
             <div className="form-group mt-1 ">
@@ -75,10 +75,15 @@ export default function RegistroForm() {
                 />
             </div>
 
+            <div className="botonReg">
+                <button onClick={registrarUsuario} className="btnOne btn-warning mt-3">
+                    Registrarme
+                </button>
+            </div>
 
-            <button onClick={registrarUsuario} className="btn btn-warning mt-3">
-                Registrarme
-            </button>
+            <div className="textReg">
+                <p className="text1">¿Ya tienes una cuenta? <span>Inicia tu sesión</span></p>
+            </div>
         </div>
     );
 }

@@ -12,7 +12,7 @@ export default function Tienda() {
 
     return (
         <div>
-            <div className="productoS">
+            <div className="gridProducts section container">
                 <Cards />
             </div>
         </div>
