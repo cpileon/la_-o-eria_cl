@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from "react-router-dom";
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
@@ -21,8 +22,8 @@ const Perfil = () => {
                         <ul>
                             <a ></a>
                             <li><a href="#">Ver mis productos</a></li>
-                            <li><a href="/publicar">Publicar un producto</a></li>
-                            <li><a href="/carrito">Ir a Mi Carrito</a></li>
+                            <li><Link to= "/publicar">Publicar un producto</Link></li>
+                            <li><Link to="/carrito">Ir a Mi Carrito</Link></li>
                             <li><a href="#">Editar Mi Perfil</a></li>
                             <li><a href="#">Cerrar Sesión</a></li>
                         </ul>

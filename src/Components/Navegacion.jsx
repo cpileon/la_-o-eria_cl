@@ -36,15 +36,15 @@ const Navegacion = () => {
               <Nav.Link href="/register">Registro</Nav.Link>
               <Nav.Link href="/tienda">Tienda</Nav.Link>
 
-              <NavDropdown title="Dropdown" id="basic-nav-dropdown" menuVariant="dark">
-                <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+              <NavDropdown title="Mi usuario" id="basic-nav-dropdown" menuVariant="dark">
+                <NavDropdown.Item href="/perfil">Perfil</NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.2">
-                  Another action
+                  Placeholder
                 </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+                <NavDropdown.Item href="#action/3.3">Placeholder</NavDropdown.Item>
                 <NavDropdown.Divider />
                 <NavDropdown.Item href="#action/3.4">
-                  Separated link
+                Placeholder
                 </NavDropdown.Item>
               </NavDropdown>
               <Nav.Link href="/carrito">Carrito</Nav.Link>
