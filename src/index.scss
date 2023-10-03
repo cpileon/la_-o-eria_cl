@@ -110,19 +110,22 @@ $dropdown-dark-bg:      hsl(15, 74%, 70%)    ;
 //Estilos por sección
 //1. Nav Bar
 .navegacion {
-    .brand {
-        .logo {
-            height: 30px;
-            filter: var(--whiteShadow);
-            transition: var(--transition);
 
-            &:hover {
-                transform: translateY(-10%);
-                filter: var(--whiteShadow2);
+        .brand {
+            .logo {
+                height: 30px;
+                filter: var(--whiteShadow);
+                transition: var(--transition);
+    
+                &:hover {
+                    transform: translateY(-10%);
+                    filter: var(--whiteShadow2);
+                }
             }
         }
-    }
+
 }
+
 
 //2. Home
 .home {
@@ -393,8 +396,15 @@ $dropdown-dark-bg:      hsl(15, 74%, 70%)    ;
         text-align: center;
     }
 }
-//9.Productos
-
+//9.Ingresar roductos
+.newProduct{
+    .form-group{
+        margin-bottom: 1rem;
+    }
+    .botonPost{
+        text-align: center;
+    }
+}
 
 //10. Galería y cartas
 .galeria {

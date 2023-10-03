@@ -307,6 +307,13 @@
   text-align: center;
 }
 
+.newProduct .form-group {
+  margin-bottom: 1rem;
+}
+.newProduct .botonPost {
+  text-align: center;
+}
+
 .galeria {
   display: grid;
   grid-template-columns: auto auto auto;

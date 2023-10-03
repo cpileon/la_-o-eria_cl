@@ -6,6 +6,8 @@ import Carousel from 'react-bootstrap/Carousel';
 
 //Importar imágenes
 import img1 from '../assets/c1.png'
+import img2 from '../assets/c2.png'
+import img3 from '../assets/c3.png'
 
 const Carrusel = () => {
     //Animación de entrada
@@ -19,7 +21,19 @@ const Carrusel = () => {
         <Carousel.Item>
           <img className="d-block w-100"
             src={img1}
-            alt="First slide"
+            alt="Seguridad"
+          />
+        </Carousel.Item>
+        <Carousel.Item>
+          <img className="d-block w-100"
+            src={img2}
+            alt="Delivery"
+          />
+        </Carousel.Item>
+        <Carousel.Item>
+          <img className="d-block w-100"
+            src={img3}
+            alt="Interacción"
           />
         </Carousel.Item>
       </Carousel>

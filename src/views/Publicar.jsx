@@ -2,7 +2,6 @@ import { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import Context from "../Context";
 import axios from "axios";
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default function Publicar() {
     const { productos, setProductos } = useContext(Context);
@@ -70,10 +69,11 @@ export default function Publicar() {
 
 
     return (
-        <div>
+        <div className="newProduct col-10 col-sm-6 col-md-3 m-auto mt-5 section">
             <h1>Publicar un Producto</h1>
+            <hr />
             <form onSubmit={handleSubmit}>
-                <div>
+                <div className="form-group gNombre">
                     <label htmlFor="nombre">Nombre del Producto:</label>
                     <input
                         type="text"
@@ -81,10 +81,11 @@ export default function Publicar() {
                         name="nombre"
                         value={productoNuevo.nombre}
                         onChange={handleChange}
+                        className="form-control"
                         required
                     />
                 </div>
-                <div>
+                <div className="form-group gPrecio">
                     <label htmlFor="precio">Precio del Producto:</label>
                     <input
                         type="number"
@@ -92,10 +93,11 @@ export default function Publicar() {
                         name="precio"
                         value={productoNuevo.precio}
                         onChange={handleChange}
+                        className="form-control"
                         required
                     />
                 </div>
-                <div>
+                <div className="form-group gStock">
                     <label htmlFor="stock">Stock Disponible:</label>
                     <input
                         type="number"
@@ -103,10 +105,11 @@ export default function Publicar() {
                         name="stock"
                         value={productoNuevo.stock}
                         onChange={handleChange}
+                        className="form-control"
                         required
                     />
                 </div>
-                <div>
+                <div className="form-group gImg">
                     <label htmlFor="imagen">Imagen del Producto (URL):</label>
                     <input
                         type="url"
@@ -114,26 +117,29 @@ export default function Publicar() {
                         name="imagen"
                         value={productoNuevo.imagen}
                         onChange={handleChange}
+                        className="form-control"
                         required
                     />
                 </div>
-                <div>
+                <div className="form-group gDesc">
                     <label htmlFor="descripcion">Descripción del Producto:</label>
                     <textarea
                         id="descripcion"
                         name="descripcion"
                         value={productoNuevo.descripcion}
                         onChange={handleChange}
+                        className="form-control"
                         required
                     />
                 </div>
-                <div>
+                <div className="form-group gCategoria">
                     <label htmlFor="categoria">Categoría de Producto:</label>
                     <select
                         id="categoria"
                         name="categoria"
                         value={productoNuevo.categoria}
                         onChange={handleChange}
+                        className="form-control"
                         required
                     >
                         <option value="">Selecciona una categoría</option>
@@ -143,13 +149,14 @@ export default function Publicar() {
                         <option value="Accesorio">Accesorio</option>
                     </select>
                 </div>
-                <div>
+                <div className="form-group gEstado">
                     <label htmlFor="estado">Estado del Producto:</label>
                     <select
                         id="estado"
                         name="estado"
                         value={productoNuevo.estado}
                         onChange={handleChange}
+                        className="form-control"
                         required
                     >
                         <option value="">Selecciona un estado</option>
@@ -159,8 +166,9 @@ export default function Publicar() {
                         <option value="Usado/ faltan piezas">Usado/ faltan piezas</option>
                     </select>
                 </div>
-
-                <button type="submit">Publicar</button>
+                <div className="botonPost">
+                    <button type="submit" className="btnOne">Publicar</button>
+                </div>
             </form>
         </div>
     );

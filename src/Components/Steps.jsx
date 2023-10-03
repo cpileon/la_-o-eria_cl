@@ -1,4 +1,6 @@
-import React from 'react'
+import React, {useEffect} from 'react'
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 
 import stepOne from '../assets/step1.png'
 import stepTwo from '../assets/step2.png'
@@ -42,17 +44,21 @@ const stepArray = [
     }
   ]
 const Steps = () => {
+  useEffect(()=>{
+    Aos.init({duration: 2000})
+  }, [])
+
   return (
     <div className='steps section'>
     <div className="sectionContainer">
-      <h2>
+      <h2 data-aos='fade-up' data-aos-duration='2500'>
         ¿Quieres usar nuestra plataforma?
       </h2>
-      <h4>
+      <h4 data-aos='fade-up' data-aos-duration='2500'>
         ¡Sigue estos sencillos pasos!
       </h4>
 
-      <div className="stepsContainer flex">
+      <div className="stepsContainer flex" data-aos='fade-right' data-aos-duration='2500'>
           {
             stepArray.map((step)=>{
               return(
