@@ -27,7 +27,7 @@ $theme-colors: (
     'secondary':hsl(255, 56%, 59%)
 );
 
-$dropdown-dark-bg:      hsl(15, 74%, 70%)    ;
+$dropdown-dark-bg: hsl(15, 74%, 70%);
 
 
 
@@ -59,7 +59,7 @@ $dropdown-dark-bg:      hsl(15, 74%, 70%)    ;
     }
 }
 
-.btnOne{
+.btnOne {
     background-color: var(--ColorPrimario);
     margin: 1.5rem;
     padding: 0.5rem 1rem;
@@ -68,14 +68,14 @@ $dropdown-dark-bg:      hsl(15, 74%, 70%)    ;
     -webkit-transition-duration: 0.4s;
     transition-duration: 0.4s;
 
-    &:hover{
+    &:hover {
         background-color: var(--agua);
         box-shadow: var(--greyShadowBtn);
     }
 
 }
 
-.btnTwo{
+.btnTwo {
     background-color: var(--ColorSecundario);
     margin: 1.5rem;
     padding: 0.5rem 1rem;
@@ -84,14 +84,14 @@ $dropdown-dark-bg:      hsl(15, 74%, 70%)    ;
     -webkit-transition-duration: 0.4s;
     transition-duration: 0.4s;
 
-    &:hover{
+    &:hover {
         background-color: var(--agua);
         box-shadow: var(--greyShadowBtn);
     }
 
 }
 
-.btnThree{
+.btnThree {
     background-color: transparent;
     margin: 1.5rem;
     padding: 0.5rem 1rem;
@@ -100,7 +100,7 @@ $dropdown-dark-bg:      hsl(15, 74%, 70%)    ;
     -webkit-transition-duration: 0.4s;
     transition-duration: 0.4s;
 
-    &:hover{
+    &:hover {
         box-shadow: var(--greyShadowBtn);
 
     }
@@ -111,18 +111,18 @@ $dropdown-dark-bg:      hsl(15, 74%, 70%)    ;
 //1. Nav Bar
 .navegacion {
 
-        .brand {
-            .logo {
-                height: 30px;
-                filter: var(--whiteShadow);
-                transition: var(--transition);
-    
-                &:hover {
-                    transform: translateY(-10%);
-                    filter: var(--whiteShadow2);
-                }
+    .brand {
+        .logo {
+            height: 30px;
+            filter: var(--whiteShadow);
+            transition: var(--transition);
+
+            &:hover {
+                transform: translateY(-10%);
+                filter: var(--whiteShadow2);
             }
         }
+    }
 
 }
 
@@ -369,39 +369,46 @@ $dropdown-dark-bg:      hsl(15, 74%, 70%)    ;
 }
 
 //7.Login
-.login{
-    .groupMail{
+.login {
+    .groupMail {
         margin-bottom: 1rem;
     }
-    .botonLogin{
+
+    .botonLogin {
         text-align: center;
     }
-    .textLogin{
+
+    .textLogin {
         text-align: center;
-        .text1{
+
+        .text1 {
             font-size: 1.5rem;
         }
     }
 }
 
 //8.Registro
-.registro{
-    .form-group{
+.registro {
+    .form-group {
         margin-bottom: 1rem;
     }
-    .botonReg{
+
+    .botonReg {
         text-align: center;
     }
-    .textReg{
+
+    .textReg {
         text-align: center;
     }
 }
+
 //9.Ingresar roductos
-.newProduct{
-    .form-group{
+.newProduct {
+    .form-group {
         margin-bottom: 1rem;
     }
-    .botonPost{
+
+    .botonPost {
         text-align: center;
     }
 }
@@ -410,28 +417,30 @@ $dropdown-dark-bg:      hsl(15, 74%, 70%)    ;
 .galeria {
     display: grid;
     grid-template-columns: auto auto auto;
-    gap:1rem;
-    .imgCard{
+    gap: 1rem;
+
+    .imgCard {
         height: 300px;
     }
-    .botones{
+
+    .botones {
         display: flex;
         justify-content: space-around
     }
 }
 
 //11.Detalle producto
-.detalleProducto{
-    .container{
-    
-        .productImage{
+.detalleProducto {
+    .container {
+
+        .productImage {
             display: flex;
             align-items: center;
             justify-content: center;
             width: 100%;
             height: 100%;
 
-            img{
+            img {
                 border-radius: 30px;
                 height: 400px;
                 width: auto;
@@ -440,6 +449,6 @@ $dropdown-dark-bg:      hsl(15, 74%, 70%)    ;
     }
 }
 
-  
+
 /*Importar bootstrap*/
 @import '~bootstrap/scss/bootstrap';
