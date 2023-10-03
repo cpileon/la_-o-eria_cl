@@ -35,30 +35,27 @@ export default function Cards() {
     }
 
     return (
-        <div className="galeria grid-columns-3 p-3">
+        <div className="galeria">
             {productos.map((producto) => {
                 return (
-                    <Card key={producto.id} style={{ width: '18rem' }}>
-                        <Card.Img variant="top" src={producto.img} />
+                    <Card key={producto.id} style={{ width: '20rem' }}>
+                        <Card.Img variant="top" src={producto.img} className="imgCard" />
                         <Card.Body>
                             <Card.Title className="titles">{producto.name}</Card.Title>
                             <hr />
                             <dl>
-                                <dt>Ingredientes:</dt>
+                                <dt>Detalles del Producto:</dt>
                                 <br />
-                                {producto.ingredients.map((ing) => {
-                                    return (
-                                        <dd key={ing}>🍕{ing[0].toUpperCase() + ing.substring(1)}</dd>
-                                    )
-                                })}
+                                <Card.Text className="categoria">{producto.cat}</Card.Text>
+                                <Card.Text className="estado">{producto.stat}</Card.Text>
                             </dl>
                             <hr />
                             <Card.Text className="prices">
                                 <strong> $ {producto.price.toLocaleString()} </strong>
                             </Card.Text>
                             <div className="botones">
-                                <Button className="bVermas" onClick={verDetalle} id={producto.id} variant="info">Ver Más 👀</Button>
-                                <Button className="bAdd" onClick={() => agregarAlCarrito(producto)} id={producto.id} variant="danger">Añadir 🛒</Button>
+                                <button className="btnOne" onClick={verDetalle} id={producto.id}>Ver Más 👀</button>
+                                <button className="btnTwo" onClick={() => agregarAlCarrito(producto)} id={producto.id}>Añadir 🛒</button>
                             </div>
                         </Card.Body>
                     </Card>
